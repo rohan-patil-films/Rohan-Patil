@@ -23,6 +23,18 @@ body {
   text-align: center;
 }
 
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.image-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.image-section {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 /* Name style */
 .side-section h1 {
   font-size: 40px;
@@ -215,6 +227,17 @@ footer {
     flex: 0 0 auto;
     overflow: auto; /* Make side-section scrollable on tablet */
   }
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.image-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.image-section {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
   
 /* T Name style */
 .side-section h1 {
@@ -338,6 +361,18 @@ footer {
     background-color: black;
     overflow: auto; /* Make side-section scrollable on mobile */
   }
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.image-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.image-section {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 
 /* M Name style */

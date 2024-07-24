@@ -114,6 +114,16 @@ body {
   padding: 0;
   margin-left: 33%; /* Offset by the width of the side section */
 }
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.image-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.image-section {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 /* Gallery grid layout */
 .gallery {
@@ -199,12 +209,13 @@ body {
 
 /* Footer styles */
 footer {
+  font-size: 14;
+  font-family: 'Marcellus', serif;
   background-color: black;
   color: white;
   text-align: center;
-  padding: 12px 0; /* Add top and bottom padding of 24 pixels */
+  margin: 0.2 em; /* Add top and bottom padding of 24 pixels */
   flex-shrink: 0; /* Ensure footer does not shrink */
-  display: none; /* Hide the footer initially */
 }
 
 /* Responsive styles - Tablet */
@@ -213,12 +224,91 @@ footer {
     flex-direction: column;
   }
 
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .side-section {
     width: 100%;
     height: 40vh;
     flex: 0 0 auto;
     overflow: auto; /* Make side-section scrollable on tablet */
     position: static; /* Remove fixed positioning */
+  }
+  .side-section h1 {
+    font-size: 24px;
+    font-family: 'Marcellus', serif;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: #e4e4e4;
+  }
+  
+  /* Professional Photographer style */
+  .side-section h2 {
+    font-size: 14px;
+    color: grey;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* 200+ style */
+  .side-section h3 {
+    font-size: 24px;
+    font-family: 'Marcellus', serif;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin: 0;
+    color: #e4e4e4;
+    margin-top: 0.5em;
+    margin-bottom: 0 em;
+  }
+   
+  /* Clients style */
+  .side-section h4 {
+    font-size: 14px;
+    color: grey;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Tagline style */
+  .side-section h5 {
+    font-size: 24px;
+    font-family: 'Marcellus', serif;
+    word-spacing: 2px;
+    font-weight: 200;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #e4e4e4;
+  }
+  
+  /* Contact section styles */
+  .side-section .contact p {
+    font-size: 14px;
+    color: grey;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .side-section .contact p a {
+    font-size: 16px;
+    font-family: 'Marcellus', serif;
+    color: #e4e4e4;
+    text-decoration: none;
+  }
+  
+  .side-section .contact p a:hover {
+    text-decoration: underline;
+    color: #e4e4e4;
+    background-color: rgb(0, 60, 189);
   }
 
   .image-section {
@@ -240,10 +330,85 @@ footer {
     height: 40vh;
     flex: 0 0 auto;
     padding: 16px;
-    overflow: auto; /* Make side-section scrollable on mobile */
+    overflow: visible; /* Make side-section scrollable on mobile */
     position: static; /* Remove fixed positioning */
   }
+  
+  .side-section h1 {
+  font-size: 24px;
+  font-family: 'Marcellus', serif;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: #e4e4e4;
+}
 
+/* Professional Photographer style */
+.side-section h2 {
+  font-size: 14px;
+  color: grey;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* 200+ style */
+.side-section h3 {
+  font-size: 24px;
+  font-family: 'Marcellus', serif;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin: 0;
+  color: #e4e4e4;
+  margin-top: 0.5em;
+  margin-bottom: 0 em;
+}
+ 
+/* Clients style */
+.side-section h4 {
+  font-size: 14px;
+  color: grey;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Tagline style */
+.side-section h5 {
+  font-size: 24px;
+  font-family: 'Marcellus', serif;
+  word-spacing: 2px;
+  font-weight: 200;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #e4e4e4;
+}
+
+/* Contact section styles */
+.side-section .contact p {
+  font-size: 14px;
+  color: grey;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.side-section .contact p a {
+  font-size: 16px;
+  font-family: 'Marcellus', serif;
+  color: #e4e4e4;
+  text-decoration: none;
+}
+
+.side-section .contact p a:hover {
+  text-decoration: underline;
+  color: #e4e4e4;
+  background-color: rgb(0, 60, 189);
+}
   .image-section {
     width: 100%;
     height: 60vh;

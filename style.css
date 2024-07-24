@@ -236,7 +236,7 @@ footer {
     position: static; /* Remove fixed positioning */
   }
   .side-section h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Marcellus', serif;
     letter-spacing: 1px;
     word-spacing: 4px;
@@ -257,7 +257,7 @@ footer {
   
   /* 200+ style */
   .side-section h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Marcellus', serif;
     letter-spacing: 1px;
     word-spacing: 4px;
@@ -279,7 +279,7 @@ footer {
   
   /* Tagline style */
   .side-section h5 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Marcellus', serif;
     word-spacing: 2px;
     font-weight: 200;

@@ -4,37 +4,32 @@ body {
   flex-direction: column;
   height: 100vh;
   font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Prevent body from scrolling */
 }
 
+/* Container for the main content */
 .container {
   display: flex;
   width: 100%;
   flex: 1;
+  overflow: hidden;
 }
 
+/* Side section styles */
 .side-section {
-  padding: 2em;
-  flex: 0 0 33%;
+
+  width: 33%; /* Ensure width is set */
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  position: fixed; /* Fix the side section */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Prevent side section from scrolling */
+  z-index: 10; /* Ensure it appears above other elements */
 }
-
-/* Hide scrollbar for webkit browsers (Chrome, Safari) */
-.image-section::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for Firefox */
-.image-section {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
 /* Name style */
 .side-section h1 {
   font-size: 40px;
@@ -45,10 +40,10 @@ body {
   margin-bottom: 0;
   color: #e4e4e4;
 }
-/* Professional Photgrapher style */
+
+/* Professional Photographer style */
 .side-section h2 {
   font-size: 18px;
-  font-family: 'Inter', sans-serif;
   color: grey;
   font-weight: 200;
   letter-spacing: 1px;
@@ -69,59 +64,58 @@ body {
 /* Clients style */
 .side-section h4 {
   font-size: 16px;
-  font-family: 'Inter', sans-serif;
   color: grey;
   font-weight: 200;
   letter-spacing: 1px;
-  margin-top: 0.5em ;
+  margin-top: 0.5em;
   margin-bottom: 4em;
 }
 
-/* Tagliine style */
+/* Tagline style */
 .side-section h5 {
   font-size: 28px;
   font-family: 'Marcellus', serif;
   word-spacing: 2px;
   font-weight: 200;
-  margin-bottom:  4em;
+  margin-bottom: 4em;
   color: #e4e4e4;
 }
 
-/* contact style */
+/* Contact section styles */
 .side-section .contact p {
   font-size: 18px;
-  font-family: 'Inter', sans-serif;
   color: grey;
   font-weight: 200;
   letter-spacing: 1px;
   margin-bottom: 0.5em;
 }
 
-/* Links style */
 .side-section .contact p a {
   font-size: 20px;
   font-family: 'Marcellus', serif;
   color: #e4e4e4;
   text-decoration: none;
-  
 }
 
-/* Links hover style */
 .side-section .contact p a:hover {
   text-decoration: underline;
   color: #e4e4e4;
   background-color: rgb(0, 60, 189);
 }
 
+/* Image section styles */
 .image-section {
   flex: 1;
   background-color: black;
-  overflow-y: scroll;
+  overflow-y: auto; /* Make the image section scrollable */
   display: flex;
+  flex-direction: column; /* Ensure column layout */
   align-content: center;
-  padding: 0px;
+  padding: 0;
+  margin-left: 33%; /* Offset by the width of the side section */
 }
 
+/* Gallery grid layout */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -129,10 +123,11 @@ body {
   width: 100%;
 }
 
+/* Gallery image styles */
 .gallery-image {
   width: 100%;
   aspect-ratio: 0.75;
-  border-radius: 0px;
+  border-radius: 0;
   cursor: pointer;
   object-fit: cover;
   filter: grayscale(100%) blur(4px);
@@ -150,7 +145,7 @@ body {
 }
 
 .gallery-image:not(:hover):not(:focus) {
-  filter: grayscale(100%) sepia(3%) blur(0px) brightness(50%);
+  filter: grayscale(100%) sepia(3%) blur(0) brightness(50%);
   transition: filter 0.2s ease, transform 0.2s ease;
 }
 
@@ -204,15 +199,12 @@ body {
 
 /* Footer styles */
 footer {
- font-size: 20px;
-  font-family: 'Marcellus', serif;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-
   background-color: black;
   color: white;
   text-align: center;
-  padding: 24px 0; /* Add top and bottom padding of 24 pixels */
+  padding: 12px 0; /* Add top and bottom padding of 24 pixels */
+  flex-shrink: 0; /* Ensure footer does not shrink */
+  display: none; /* Hide the footer initially */
 }
 
 /* Responsive styles - Tablet */
@@ -220,131 +212,21 @@ footer {
   .container {
     flex-direction: column;
   }
-  
+
   .side-section {
     width: 100%;
     height: 40vh;
     flex: 0 0 auto;
     overflow: auto; /* Make side-section scrollable on tablet */
+    position: static; /* Remove fixed positioning */
   }
-/* Hide scrollbar for webkit browsers (Chrome, Safari) */
-.image-section::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for Firefox */
-.image-section {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-  
-/* T Name style */
-.side-section h1 {
-  font-size: 28px;
-  font-family: 'Marcellus', serif;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  color: #e4e4e4;
-}
-/* T Professional Photgrapher style */
-.side-section h2 {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
-}
-
-/* T 200+ style */
-.side-section h3 {
-  font-size: 22px;
-  font-family: 'Marcellus', serif;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  margin: 0;
-  color: #e4e4e4;
-}
-
-/* T Clients style */
-.side-section h4 {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin-bottom: 2em ;
-}
-
-/* T Tagliine style */
-.side-section h5 {
-  font-size: 22px;
-  font-family: 'Marcellus', serif;
-  word-spacing: 2px;
-  font-weight: 200;
-  margin-top: 0;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom:  1.5em;
-  color: #e4e4e4;
-}
-
-/* T contact style */
-.side-section .contact p {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin: 6px 0px;
-}
-
-/* T Links style */
-.side-section .contact p a {
-  font-size: 16px;
-  font-family: 'Marcellus', serif;
-  color: #e4e4e4;
-  text-decoration: none;
-  
-}
-
-/* T Links hover style */
-.side-section .contact p a:hover {
-  text-decoration: underline;
-  color: #e4e4e4;
-  background-color: rgb(0, 60, 189);
-}
   .image-section {
     width: 100%;
     height: 60vh;
     flex: 1;
+    margin-left: 0; /* Reset margin */
   }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: gray;
-    font-size: 40px;
-    font-weight: normal;
-    transition: 0.3s;
-  }
-  /* T Footer styles */
-footer {
-  background-color: black;
-  font-family: "Marcellus", sans-serif;
-  color: #e4e4e4;
-  text-align: center;
-  padding: 24px 0; /* Add top and bottom padding of 24 pixels */
-}
-
 }
 
 /* Responsive styles - Mobile */
@@ -352,144 +234,33 @@ footer {
   .container {
     flex-direction: column;
   }
-  
+
   .side-section {
     width: 100%;
     height: 40vh;
     flex: 0 0 auto;
     padding: 16px;
-    background-color: black;
     overflow: auto; /* Make side-section scrollable on mobile */
+    position: static; /* Remove fixed positioning */
   }
 
-/* Hide scrollbar for webkit browsers (Chrome, Safari) */
-.image-section::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for Firefox */
-.image-section {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-
-/* M Name style */
-.side-section h1 {
-  font-size: 28px;
-  font-family: 'Marcellus', serif;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  color: #e4e4e4;
-}
-/* M Professional Photgrapher style */
-.side-section h2 {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
-}
-
-/* M 200+ style */
-.side-section h3 {
-  font-size: 22px;
-  font-family: 'Marcellus', serif;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  margin: 0;
-  color: #e4e4e4;
-}
-
-/* M Clients style */
-.side-section h4 {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin-bottom: 2em ;
-}
-
-/* M Tagliine style */
-.side-section h5 {
-  font-size: 22px;
-  font-family: 'Marcellus', serif;
-  word-spacing: 2px;
-  font-weight: 200;
-  margin-top: 0;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom:  1.5em;
-  color: #e4e4e4;
-}
-
-/* M contact style */
-.side-section .contact p {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: grey;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin: 6px 0px;
-}
-
-/* M Links style */
-.side-section .contact p a {
-  font-size: 16px;
-  font-family: 'Marcellus', serif;
-  color: #e4e4e4;
-  text-decoration: none;
-  
-}
-
-/* M Links hover style */
-.side-section .contact p a:hover {
-  text-decoration: underline;
-  color: #e4e4e4;
-  background-color: rgb(0, 60, 189);
-}
-  
   .image-section {
     width: 100%;
     height: 60vh;
     flex: 1;
+    margin-left: 0; /* Reset margin */
   }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Modal styles */
-.modal-content {
-  margin: auto;
-  display: block;
-  max-height: 75%;
-  max-width: 75%;
-  animation-name: zoom;
-  animation-duration: 0.9s;
-}
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: gray;
-  font-size: 32px;
-  font-weight: normal;
-  transition: 0.3s;
-}
- /* Footer styles */
-footer {
-  background-color: black;
-  font-family: "Marcellus", sans-serif;
-  color: #e4e4e4;
-  text-align: center;
-  padding: 16px 0; /* Add top and bottom padding of 24 pixels */
-}
+  .modal-content {
+    max-height: 75%;
+    max-width: 75%;
+  }
 
-
+  .close {
+    font-size: 32px;
+  }
 }

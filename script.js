@@ -77,4 +77,19 @@ function setupGallery() {
       document.querySelectorAll(".gallery-image").forEach((img) => img.classList.remove("active"));
     }
   }
+  const imageSection = document.querySelector('.image-section');
+  const footer = document.querySelector('footer');
+  let footerVisible = false;
+
+  imageSection.addEventListener('scroll', function () {
+    const isAtBottom = imageSection.scrollHeight - imageSection.scrollTop === imageSection.clientHeight;
+
+    if (isAtBottom && !footerVisible) {
+      footer.style.display = 'block';
+      footerVisible = true;
+    } else if (!isAtBottom && footerVisible) {
+      footer.style.display = 'none';
+      footerVisible = false;
+    }
+  });
 }

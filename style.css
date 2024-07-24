@@ -192,6 +192,11 @@ body {
 
 /* Footer styles */
 footer {
+ font-size: 20px;
+  font-family: 'Marcellus', serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+
   background-color: black;
   color: white;
   text-align: center;

@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rohan Patil films</title>
-  <!-- Link to external stylesheets -->
+  <!-- Link to external stylesheets ------------------------------>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;700&family=Marcellus&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body oncontextmenu="return false;">
-  <div class="container">
-    <!-- Side section with photographer's information -->
-    <div class="side-section">
-      <h1>ROHAN PATIL</h1>
-      <h2>PROFESSIONAL EVENT PHOTOGRAPHER</h2>
-      <h3>200+</h3>
-      <h4>SATISFIED CLIENTS</h4>
-      <h5><i class="fas fa-quote-left fa-2xs" style="color: grey;"></i> Turn Your Beautiful Moments into <br> Memories <i class="fas fa-quote-right fa-2xs" style="color: grey;"></i></h5>
-      <div class="contact">
-        <p>CONTACT</p>
-        <p><i class="fab fa-instagram"></i><a href="http://instagram.com/rp_photography1503"> INSTAGRAM - 7800+ Followers</a></p>
-        <p><i class="far fa-phone"></i><a href="tel:+91 7249006122"> +91 7249006122</a></p>
+
+  <div class="header">
+    <h1>ROHAN PATIL</h1>
+
+    <h2>"Turn Your Beautiful Moments Into Memories"</h2>
+    <div class="info">
+
+      <div class="social">
+        <p>7000+</p>
+        <span><i class="fab fa-instagram fa-lg"></i> &nbsp;<a href="http://instagram.com/rp_photography1503"
+            target="_blank"> Instagram Followers</a></span>
       </div>
-    </div>
-    <!-- Image section where images will be dynamically inserted -->
-    <div class="image-section">
-      <div class="gallery" id="gallery">
-        <!-- Images will be dynamically inserted here -->
+      <div class="clients">
+        <p>200+</p>
+        <span>Satisfied Clients </span>
+      </div>
+      <div class="contact">
+        <p>+91 7249006122</p>
+        <span><i class="fab fa-whatsapp fa-lg"></i>&nbsp; <a
+            href="https://wa.me/917249006122?text=I'm%20inquiring%20about%20charges%20and%20availability"
+            target="_blank">Connect on WhatsApp</a></span>
+
       </div>
     </div>
   </div>
+
+  <!-- Image section where images will be dynamically inserted ---->
+
+  <div class="gallery" id="gallery">
+    <!-- Images will be dynamically inserted here --->
+  </div>
+
+
   <footer>
     <p>© 2024 Rohan Patil</p>
   </footer>
 
-  
   <!-- Modal for zoomed image -->
   <div id="modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modal-img">
   </div>
-  
+
+
   <!-- Link to the external script file, defer loading to improve performance -->
   <script src="script.js" defer></script>
 </body>
+
 </html>
